@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.catList{
+    list-style: none;
+    background-color: #232f3e;
+    color: white;
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    /* padding: 10px 0px; */
+    align-items: center;
+    font-weight: 500;
+    height: 3vw;
+    width: 100%;
+    cursor: pointer;
+}
+
+.catList li{
+    padding: 4px 1px;
+}
+
+.catList li:hover{
+    border: 1px solid white;
+}
+
+
+
+.menuIcon{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}

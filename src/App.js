@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  import './App.css';
+  import Maincompt from './components/body/Maincompt';
+  import Footer from './components/footer/Footer';
+  import Category from './components/header/Category';
+  import Navbar from './components/header/Navbar';
+  import Signin from './components/Signup_Signin/Signin';
+  import Signup from './components/Signup_Signin/Signup';
+  import Cart from './components/Signup_Signin/cart/Cart';
+  import {
+    BrowserRouter as Router, Routes, Route
+  } from 'react-router-dom';
 
-export default App;
+  function App() {
+    return (
+      <>
+      <Router>
+      <Navbar/>
+      <Category/>
+      <Routes>
+      <Route path='/' element={<Maincompt />}/>
+      <Route path='/signup' element={<Signup />}/>
+      <Route path='/login' element={<Signin />}/>
+      <Route path='/cart' element={<Cart />}/>
+      </Routes>
+      <Footer/>
+      </Router>
+    </>
+    );
+  }
+
+  export default App;
